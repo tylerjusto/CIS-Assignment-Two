@@ -1,1 +1,23 @@
+nav{
+  height:6em;
+  background-color:white;
+  text-align:right;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top: black double 4px;
+  font-family: 'Josefin Sans', sans-serif;
+}
 
+nav a {
+  padding: .5em;
+}
+
+.staff-image{
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.staff-card{
+  text-align:center ;
+}
