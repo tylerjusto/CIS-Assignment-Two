@@ -31,7 +31,7 @@ function EventCard(props){
 
 export default function Events(){
 
-    let eventsDisplay = events.Data.map((event))  <EventCard time={event.time}
+    let eventsDisplay = events.Data.map((event)) => <EventCard time={event.time}
                                                                title={event.title}
                                                                description={event.description}/> );
 
