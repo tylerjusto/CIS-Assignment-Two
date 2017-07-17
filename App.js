@@ -6,22 +6,22 @@ import About from './About';
 import Events from './Events';
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			headerMinimized: false
-		};
-	}
+    constructor(props) {
+        super(props);
+        this.state = {
+            headerMinimized: false
+        };
+    }
 
-	minimizeHeader = () => {
-		this.setState({
-			headerMinimized: !this.state.headerMinimized
-		});
-	};
+    minimizeHeader = () => {
+        this.setState({
+            headerMinimized: !this.state.headerMinimized
+        });
+    };
 
-	render() {
-		let {headerMinimized} = this.state;
-		return (
+    render() {
+        let {headerMinimized} = this.state;
+        return (
 			<BrowserRouter>
 				<div>
 					<div className={`App-hero ${headerMinimized ? 'minimized' : ''}`}>
@@ -39,8 +39,8 @@ class App extends Component {
 					<Route path="/Events" exact component={Events}/>
 				</div>
 			</BrowserRouter>
-		);
-	}
+        );
+    }
 }
 
 

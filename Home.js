@@ -28,8 +28,8 @@ function MembershipCosts(){
         <div>
             <p>Unlimited Prices</p>
             <p>Month Unlimited = 31 days</p>
-            <p>Level & Two $30</p>
-            <p>All Levels $49</p>
+            <p>Level & Two $30.99</p>
+            <p>All Levels $49.99</p>
         </div>
     )
 }

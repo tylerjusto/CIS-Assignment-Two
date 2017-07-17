@@ -11,7 +11,7 @@
 }
 
 header {
-  background:url('Images/pool.jpg') 50% no-repeat;
+  background:url('./Images/TanningOasis.png') 50% no-repeat;
   background-size: cover;
   flex-grow:1;
   align-items: center;
@@ -42,7 +42,7 @@ nav{
   justify-content: center;
   display: flex;
   border-top: black double 4px;
-  font-family: 'Sgoe Script', Segoe Script;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 nav a {

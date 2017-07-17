@@ -1,43 +1,20 @@
 {
-  "name": "package-json",
-  "version": "2.4.0",
-  "description": "Get the package.json of a package from the npm registry",
-  "license": "MIT",
-  "repository": "sindresorhus/package-json",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "npm",
-    "registry",
-    "package",
-    "pkg",
-    "package.json",
-    "json",
-    "module",
-    "scope",
-    "scoped"
-  ],
+  "name": "starter",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "got": "^5.0.0",
-    "registry-auth-token": "^3.0.1",
-    "registry-url": "^3.0.3",
-    "semver": "^5.1.0"
+    "bulma": "^0.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
-    "ava": "*",
-    "mock-private-registry": "^1.1.0",
-    "xo": "*"
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
