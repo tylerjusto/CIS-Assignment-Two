@@ -10,7 +10,7 @@ function HoursOfOperation(){
             <p> Monday-Friday: 9am - 7pm</p>
             <p>Saturday: 11am - 4pm</p>
             <p>Sunday: 1pm - 6pm</p>
-            </div>
+        </div>
     )
 }
 
@@ -28,8 +28,8 @@ function MembershipCosts(){
         <div>
             <p>Unlimited Prices</p>
             <p>Month Unlimited = 31 days</p>
-            <p>Level & Two $30.99</p>
-            <p>All Levels $49.99</p>
+            <p>Level & Two $30</p>
+            <p>All Levels $49</p>
         </div>
     )
 }
