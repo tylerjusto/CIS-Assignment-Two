@@ -1,41 +1,50 @@
-import React from 'react';
-import ImageStaff1 from './Images/TanningTeamMember.png';
-import ImageStaff2 from './Images/TanningTeamMemberTwo.png';
-import ImageStaff3 from './Images/TanningTeamMemberThree.png';
+import React, { Component } from 'react';
+import {BrowserRouter, Route, Link} from 'react-router-dom'
+import './App.css';
+import Home from './Home';
+import About from './About';
+import Events from './Events';
 
-function HistoryText(){
-    return (
-        <div>
-            <p>Owners of Tanning Oasis - Adam & Julie Lewis</p>
-            <p>Adam purchased 50% of Tanning Oasis in 2003 with long time friend Joel Hastings. They opened a second salon in 2006 in Birmingham. In 2009, Adam and Joel moved on from their business relationship by Adam purchasing the Tuscaloosa salon and selling Joel the Birmingham salon. Adam will be forever grateful to Joel for the opportunity  in 2003.</p>
-        </div>
-    )
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			headerMinimized: false
+		};
+	}
+
+	minimizeHeader = () => {
+		this.setState({
+			headerMinimized: !this.state.headerMinimized
+		});
+	};
+
+	render() {
+		let {headerMinimized} = this.state;
+		return (
+			<BrowserRouter>
+				<div>
+					<div className={`App-hero ${headerMinimized ? 'minimized' : ''}`}>
+						<header onClick={this.minimizeHeader}>
+							<Link to="/"><h1>Tanning Oasis</h1></Link>
+						</header>
+						<nav>
+							<Link to="/">Home</Link> |
+							<Link to="/About">About</Link> |
+							<Link to="/Events">Events</Link>
+						</nav>
+					</div>
+					<Route path="/" exact component={Home}/>
+					<Route path="/About" exact component={About}/>
+					<Route path="/Events" exact component={Events}/>
+				</div>
+			</BrowserRouter>
+		);
+	}
 }
 
-function StaffBios(){
-    return (
-        <div>
-            <StaffCard name="Emma Holsombeck" title="Manager" image={ImageStaff1} />
-            <StaffCard name="Megan Fuller" title="Employee" image={ImageStaff2} />
-            <StaffCard name="Kayla Hallman" title="Employee" image={ImageStaff3} />
-        </div>
-    )
-}
 
-function StaffCard(props){
-    return (
-        <figure className="staff-card">
-            <img className="staff-image" src={props.image} alt={props.name}/>
-            <figcaption><strong>{props.name}</strong> {props.title}</figcaption>
-        </figure>
-    )
-}
 
-export default function About(){
-    return (
-        <div>
-            <HistoryText/>
-            <StaffBios/>
-        </div>
-    );
-}
+
+
+export default App;
